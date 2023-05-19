@@ -29,7 +29,7 @@ $ python3 manage.py startapp game
 $ python3 manage.py createsuperuser
 ```
 
-### 4。 实现路由定向
+### 4. 实现路由定向
 * templates ：管理 html 文件
 * urls ：管理路由，即链接与函数的对应关系
 * views ：管理 http 函数
@@ -92,3 +92,31 @@ audio : 声音
 consumers 目录：管理 websocket 函数
 
 **url 输入网址 -> my_first_WEBpage.urls -> page.urls -> page.views.index -> main.html -> 展示页面**
+
+
+### 6. 配置nginx
+将 nginx.conf 中的内容写入服务器 /etc/nginx/nginx.conf 文件中。如果 django 项目路径与配置文件中不同，注意修改路径。
+将 acapp.key 中的内容写入服务器 /etc/nginx/cert/acapp.key 文件中。
+将 acapp.pem 中的内容写入服务器 /etc/nginx/cert/acapp.pem 文件中。
+```shell
+$ nginx start
+```
+将域名添加到 ALLOWED_HOSTS 列表中
+在 django 项目中添加uwsgi的配置文件 : scripts/uwsgi.ini
+```shell
+[uwsgi]
+socket          = 127.0.0.1:8000
+chdir           = /home/acs/acapp
+wsgi-file       = acapp/wsgi.py
+master          = true
+processes       = 2
+threads         = 5
+vacuum          = true
+```
+启动Django服务
+```shell
+$ uwsgi --ini scripts/uwsgi.ini
+```
+
+### 7. 多页面设计
+显示笔记。嵌入md文件（其实是直接md -> html）
