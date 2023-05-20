@@ -1,0 +1,24 @@
+{% load static %}
+<!-- Django 中引入全局setting里的变量 static 的语法-->
+
+<head>
+    <link rel="stylesheet" href="https://cdn.acwing.com/static/jquery-ui-dist/jquery-ui.min.css">
+    <script src="https://cdn.acwing.com/static/jquery/js/jquery-3.3.1.min.js"></script>
+    <!-- 上述两句引入 jQuery 库 -->
+    <!-- 使用引入的变量 static 的语法如下 -->
+    <link rel="stylesheet" href="{% static 'css/game.css' %}">
+    <!-- 分别引入 css 文件和总的 js 文件 -->
+    <!-- 为了避免引入的类是全局的，这里删去了.js，放在了下面import -->
+    <link rel="icon" href="https://cdn.acwing.com/media/article/image/2021/12/17/1_be4c11ce5f-acapp.png">
+    <!-- 网页显示图标 -->
+</head>
+
+<body style="margin: 0">
+    <div id="ac_game_12345678"></div>
+    <script type="module">
+        import { AcGame } from "{% static 'js/dist/game.js' %}";
+        $(document).ready(function () {
+            let ac_game = new AcGame("ac_game_12345678")
+        })
+    </script>
+</body>

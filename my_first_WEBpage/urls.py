@@ -17,7 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-urlpatterns = [ 
-    path('', include('page.urls.index')),
+urlpatterns = [
+    path('notebook/', include('notebook.urls.index')),
+    path('game/', include('game.urls.index')),
     path('admin/', admin.site.urls),
-] 
+]
