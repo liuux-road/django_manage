@@ -26,15 +26,16 @@ SECRET_KEY = 'django-insecure-wu695vjvlp6t*3%ppackxrp!j)-!%$w^$pb2lm&)2kibdm2&-@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["47.120.42.98", "www.liuux.top", "app5427.acapp.acwing.com.cn"]
+ALLOWED_HOSTS = ["47.120.42.98", "liuux.top", "liuux.top"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'channels',
-    'game.apps.GameConfig',
+    'main.apps.MainConfig',
     'notebook.apps.NotebookConfig',
+    'game.apps.GameConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

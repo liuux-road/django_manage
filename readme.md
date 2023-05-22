@@ -99,7 +99,9 @@ consumers 目录：管理 websocket 函数
 将 acapp.key 中的内容写入服务器 /etc/nginx/cert/acapp.key 文件中。<br>
 将 acapp.pem 中的内容写入服务器 /etc/nginx/cert/acapp.pem 文件中。
 ```shell
-$ nginx start
+$ sudo /etc/init.d/nginx start
+# 修改url
+perl -pi -e 's|app5427.acapp.acwing.com.cn|liuux.top|g' `find ./ -type f`
 ```
 将域名添加到 ALLOWED_HOSTS 列表中<br>
 在 django 项目中添加uwsgi的配置文件 : scripts/uwsgi.ini
@@ -130,6 +132,7 @@ $ uwsgi --ini scripts/uwsgi.ini
 二是一个acwing学的游戏<br><br>
 **目标架构：**<br>
 ├──个人主页<br>
+│   │<br>
 │   ├── 笔记<br>
 │   │   ├── 论文<br>
 │   │   ├── 算法<br>

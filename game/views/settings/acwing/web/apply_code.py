@@ -15,7 +15,7 @@ def apply_code(request):
     # 传递的四个参数
     appid = "5427"
     # quote就是换特殊字符
-    redirect_uri = quote("https://app5427.acapp.acwing.com.cn/game/settings/acwing/web/receive_code/")
+    redirect_uri = quote("https://liuux.top/game/settings/acwing/web/receive_code/")
     scope = "userinfo"
     # 给一个随机值，防止被攻击
     state = get_state()

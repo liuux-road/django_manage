@@ -36,7 +36,7 @@ class Settings {
         </div>
         <br>
         <div class="ac-game-settings-acwing">
-            <img width="30" src="https://app5427.acapp.acwing.com.cn/static/image/settings/acwing_logo.png">
+            <img width="30" src="https://liuux.top/static/image/settings/acwing_logo.png">
             <br>
             <div>
                 AcWing一键登录
@@ -152,7 +152,7 @@ class Settings {
     // 申请授权码code
     acwing_login() {
         $.ajax({
-            url: "https://app5427.acapp.acwing.com.cn/game/settings/acwing/web/apply_code/",
+            url: "https://liuux.top/game/settings/acwing/web/apply_code/",
             type: "GET",
             success: function (resp) {
                 // console.log(resp);
@@ -199,7 +199,7 @@ class Settings {
     getinfo_acapp() {
         let outer = this;
         $.ajax({
-            url: "https://app5427.acapp.acwing.com.cn/game/settings/acwing/acapp/apply_code/",
+            url: "https://liuux.top/game/settings/acwing/acapp/apply_code/",
             type: "GET",
             success: function (resp) {
                 if (resp.result === "success") {
@@ -214,7 +214,7 @@ class Settings {
     getinfo_web() {
         let outer = this;
         $.ajax({
-            url: "https://app5427.acapp.acwing.com.cn/game/settings/getinfo/",
+            url: "https://liuux.top/game/settings/getinfo/",
             type: "GET",
             data: {
                 platform: outer.platform,
@@ -242,7 +242,7 @@ class Settings {
         let password = this.$login_password.val();
         this.$login_error_message.empty();
         $.ajax({
-            url: "https://app5427.acapp.acwing.com.cn/game/settings/login/",
+            url: "https://liuux.top/game/settings/login/",
             type: "GET",
             data: {
                 username: username,
@@ -267,7 +267,7 @@ class Settings {
         this.$register_error_message.empty();
 
         $.ajax({
-            url: "https://app5427.acapp.acwing.com.cn/game/settings/register/",
+            url: "https://liuux.top/game/settings/register/",
             type: "GET",
             data: {
                 username: username,
@@ -291,7 +291,7 @@ class Settings {
         }
         else {
             $.ajax({
-                url: "https://app5427.acapp.acwing.com.cn/game/settings/logout/",
+                url: "https://liuux.top/game/settings/logout/",
                 type: "GET",
                 success: function (resp) {
                     // console.log(resp);

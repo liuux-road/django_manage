@@ -1,7 +1,7 @@
 class MultiPlayerSocket {
     constructor(playground) {
         this.playground = playground;
-        this.ws = new WebSocket("wss://app5427.acapp.acwing.com.cn/wss/multiplayer/");
+        this.ws = new WebSocket("wss://liuux.top/wss/multiplayer/");
         this.start();
     }
     start() {
@@ -9,20 +9,20 @@ class MultiPlayerSocket {
     }
     receive() {  // 从前端接收信息。等待接收信息，并判断怎么执行
         let outer = this;
-        this.ws.onmessage = function(e) {
+        this.ws.onmessage = function (e) {
             let data = JSON.parse(e.data);  // 将收到的JSON还原成字典格式，再处理
             let uuid = data.uuid;
             if (uuid === outer.uuid) return false;  // 如果是自己发的消息，不接收
             let event = data.event;
             if (event === "create_player") {  // 有用户创建了角色，调用函数
-                outer.receive_create_player(uuid, data.username, data.photo);  
+                outer.receive_create_player(uuid, data.username, data.photo);
             }
             else if (event === "move_to") {  // 角色移动事件，调用函数
                 outer.receive_move_to(uuid, data.tx, data.ty);
             }
             else if (event === "shoot_fireball") {  // 火球添加事件，调用函数
                 outer.receive_shoot_fireball(uuid, data.tx, data.ty, data.ball_uuid);
-            }            
+            }
             else if (event === "attack") {  // 火球击中事件，调用函数
                 outer.receive_attack(uuid, data.attackee_uuid, data.x, data.y, data.angle, data.damage, data.ball_uuid);
             }
@@ -60,7 +60,7 @@ class MultiPlayerSocket {
     }
     get_player(uuid) {  // 找到uuid对应的角色
         let players = this.playground.players;
-        for (let i = 0; i < players.length; i ++ ) {
+        for (let i = 0; i < players.length; i++) {
             let player = players[i];
             if (player.uuid === uuid) {
                 return player;

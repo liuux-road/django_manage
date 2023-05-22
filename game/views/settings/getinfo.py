@@ -24,7 +24,6 @@ def getinfo_web(request):
         })
 
 def getinfo(request):   # 处理请求
-    print("处理请求处理请求处理请求处理请求处理请求处理请求处理请求处理请求处理请求处理请求处理请求处理请求处理请求处理请求")
     platform = request.GET.get('platform')  # 根据请求的平台不同，进行不同返回处理
     if platform == "ACAPP":
         return getinfo_acapp(request)
