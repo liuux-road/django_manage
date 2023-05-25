@@ -146,3 +146,9 @@ $ uwsgi --ini scripts/uwsgi.ini
 │   ├── 吃灰夹<br>
 │   │<br>
 │   │<br>
+
+### 8. 图床
+typorn使用
+picgo作为中介
+SFTP协议传输，插件运行
+传到media文件中
