@@ -10,7 +10,7 @@ import os
 import django
 
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_first_WEBpage.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_manage.settings')
 django.setup()
 
 

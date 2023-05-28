@@ -15,7 +15,7 @@ from queue import Queue
 from time import sleep
 from threading import Thread
 
-from my_first_WEBpage.asgi import channel_layer
+from django_manage.asgi import channel_layer
 from asgiref.sync import async_to_sync  # 多线程变成单线程的API
 from django.core.cache import cache
 

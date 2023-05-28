@@ -1,4 +1,4 @@
-"""my_first_WEBpage URL Configuration
+"""django_manage URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -21,5 +21,7 @@ urlpatterns = [
     path('', include('main.urls.index')),
     path('notebook/', include('notebook.urls.index')),
     path('game/', include('game.urls.index')),
+    path('travel/', include('travel.urls.index')),
+    path('favorites/', include('favorites.urls.index')),
     path('admin/', admin.site.urls),
 ]

@@ -15,7 +15,7 @@ $ touch .gitignore
 $ git add .
 $ git commit -m "first commit"
 $ git branch -M main
-$ git remote add origin git@github.com:liuux-road/my_first_WEBpage.git
+$ git remote add origin git@github.com:liuux-road/django_manage.git
 $ git push -u origin main
 ```
 
@@ -34,10 +34,10 @@ $ python3 manage.py createsuperuser
 * urls ：管理路由，即链接与函数的对应关系
 * views ：管理 http 函数
 * models ：管理数据库数据
-**url 输入网址 -> my_first_WEBpage.urls -> page.urls -> page.views.index -> 展示页面**
+**url 输入网址 -> django_manage.urls -> page.urls -> page.views.index -> 展示页面**
 
-* `my_first_WEBpage/settings`中的`INSTALLED_APPS`加入`'page.apps.PageConfig',`
-* `my_first_WEBpage/settings`中的`TIME_ZONE` = `'Asia/Shanghai'`
+* `django_manage/settings`中的`INSTALLED_APPS`加入`'page.apps.PageConfig',`
+* `django_manage/settings`中的`TIME_ZONE` = `'Asia/Shanghai'`
 * 声明静态文件路径：
 
 ```shell
@@ -49,7 +49,7 @@ MEDIA_URL = '/media/'
 ```
 
 ```python
-# my_first_WEBpage.urls
+# django_manage.urls
 from django.contrib import admin
 from django.urls import path, include
 
@@ -91,7 +91,7 @@ audio : 声音<br>
 …<br>
 consumers 目录：管理 websocket 函数
 
-**url 输入网址 -> my_first_WEBpage.urls -> page.urls -> page.views.index -> main.html -> 展示页面**
+**url 输入网址 -> django_manage.urls -> page.urls -> page.views.index -> main.html -> 展示页面**
 
 
 ### 6. 配置nginx
@@ -108,8 +108,8 @@ perl -pi -e 's|app5427.acapp.acwing.com.cn|liuux.top|g' `find ./ -type f`
 ```shell
 [uwsgi]
 socket          = 127.0.0.1:8000
-chdir           = /home/liuux/my_first_WEBpage
-wsgi-file       = my_first_WEBpage/wsgi.py
+chdir           = /home/liuux/django_manage
+wsgi-file       = django_manage/wsgi.py
 master          = true
 processes       = 2
 threads         = 5
