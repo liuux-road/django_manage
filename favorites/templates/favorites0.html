@@ -1,0 +1,174 @@
+{% load static %}
+<!-- Django 中引入全局setting里的变量 static 的语法-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- 使用引入的变量 static 的语法如下 -->
+    <link rel="stylesheet" href="{% static 'css/favorites.css' %}">
+    <!-- <link href="favorites.css" rel="stylesheet"> -->
+
+    <title>导航</title>
+</head>
+
+<body>
+    <div class="top">
+        <div class="nav">
+            <br>
+            <ul>
+                <li><a href="https://liuux.top"><span>blog</span></a></li>
+                <!-- <li><a href="#"><span>github</span></a></li> -->
+                <!-- <li><a href="#"><span></span></a></li> -->
+                <!--       <li><a href="#"><span>用户指导</span></a></li> -->
+                <!-- <li><a href="#"><span>关于我们</span></a></li> -->
+            </ul>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="search">
+        <span class="search-left">
+            <img style="width:30px; border-radius: 50%;" src="https://liuux.top/media/image/icon.jpg" alt="">
+        </span>
+        <!-- <select name="select" class="searchselect">
+            <option value="">--Please choose an option--</option>
+            <option value="百度">百度</option>
+            <option value="知乎">知乎</option>
+            <option value="Bing">Bing</option>
+            <option value="BiliBili">BiliBili</option>
+            <option value="Google">Google</option>
+            <option value="GitHub">GitHub</option>
+            <option value="StackOverdlow">StackOverdlow</option>
+        </select> -->
+        <input type="text" class="input" placeholder="请输入">
+        <span class='search-buttom'>
+            搜索
+            <span>
+
+                <button type="button" class="button GitHub">GitHub</button>
+                <button type="button" class="button 知乎">知乎</button>
+                <button type="button" class="button BiliBili">BiliBili</button>
+                <button type="button" class="button Bing">Bing</button>
+                <button type="button" class="button 百度">百度</button>
+                <button type="button" class="button Google">Google</button>
+
+                <button type="button" class="button StackOverdlow">StackOverdlow</button>
+            </span>
+        </span>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="favorites">
+        <span class='alt'>
+            <span>
+                <pre>
+                    <A HREF="https://yjs.cqupt.edu.cn/" ADD_DATE="1654918691" ICON="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADGUlEQVQ4jU2TPW9bZRiGr+c9Pnb8GdtJExlah6Q0pKGC0DIUIgELCCGBRFHFwsLA1IGfAAO/oBMIiRVEQEyVEFQVBVWtEFEaoYRQ7HyQpGlix3ZsH/scn5P3YQhIXPt96V4uUVUPSPIvVhUDEiLc37iNY1yenXgRRyxWRY0I/6MvqqqABcSqxSDSCS2Lf37FWfszYhyq8gqXpq+ScRVFVE4kChix1loRwVorRqATWhZXP6fUvM2+W2QQRpSdLo3x17kw+R4ZF6yCMUb15C1irYoIGqhh+a8vdcK7Q5UiH/16wMe/HVKVImc6t1iufquhGkRQa1UAMSKiIqoiRla372ih9aPU3QJv39jgraksr5YzvPldlZWmS/7whqztLaqczFRE1FhrRUAedVu0txYkl0jx/s2HzBQS5JIxXprIcHbY5drdOqIGb3dBDrwOAmKtFQPKMYbNnZuU7AGfVQNWdtpcnS1QbQ140Az4YG6Uyl6XT9dDYrUKWw9/wopBUIwRQ6PfhcZd/Hia60s1Lk/luFxKMVNMkIs7XDk3zNNn0nyx2qTjpDiu/UKj30PEYBBhv7lKIarxzdaAnh/y7vk8t/7ustYI2PNCVg99Prx4Cs8b8EMDxkyN/cYfIIIZWAjaa4BlodphvpzFj5SYCKrKY7k43292mci5zE9m+brSwarFb68RWjBBFBHrb/PgyOJFlmtzI0xmXU5nXF57IoujMDc2xLHCJ/PjtPyIDU9JhNv40TGxftTDDFpsepaninEqRwMCC5m4YanmA0Ivsqw3A+Jxh5ligt9rAx7Pt/AjH+MHbRXT1ncunNLzxaTe3/XI2YjZtMNzeZfpITiXdhgdclhcb3GxlNYrs6Nqj1vqD9oaS8dz7KSekUJshetvjFLb8vTe0oG4YYiviljL6XSCuUKCl6cTeumFEdk79Nk1s5RiKRVV1V6EVh4t02/fw/Ur4gRHpIaUVr1Hrx9RLufxQkNgckTJJzWZe56p8Tkyroioahe1acTQi6DRa2jP2xJrm9Trh4SRUhofw8RGyKbLmk8OSzL2X4zi/QNxxJjW2hmINAAAAABJRU5ErkJggg==">重庆邮电大学研究生院</A>
+重庆邮电大学研究生院
+百度网盘
+QQ邮箱
+网易邮箱6.0版
+腾讯企业邮箱
+企业微信
+重庆邮电大学网上服务大厅
+重庆邮电大学邮件系统
+腾讯企业邮箱
+Baidu AI Studio - 一站式AI开发实训平台
+活动 - AcWing
+Projects · Dashboard · GitLab
+New Tab
+云服务器管理控制台
+Stack Overflow - Where Developers Learn, Share, & Build Careers
+                </pre>
+            </span>
+            网站
+        </span>
+        <span class='alt'>
+            深度学习
+            <span>
+                <pre>
+Python教程 - 廖雪峰的官方网站
+Heywhale和鲸（官网）- 数据科学协同创新平台
+GitHub - ljpzzz/machinelearning: My blogs and code for machine learning. http://cnblogs.com/pinard
+Xgboost完全详细解读（原理+代码） - 知乎
+【一起学习深度学习】 深度学习导航 | 入门深入学习 | 快速复习笔记 | 知识点总结 - 知乎
+刘建平Pinard - 博客园
+机器学习|的最新进展带代码的论文
+3.8.3 Documentation
+PyTorch
+Kaggle: Your Machine Learning and Data Science Community
+Label Distribution Learning
+算法大赛-天池大数据竞赛-天池大赛-阿里云天池
+《动手学深度学习》 — 动手学深度学习 2.0.0-beta1 documentation
+课程安排 - 动手学深度学习课程
+GitHub - lss233/chatgpt-mirai-qq-bot: 🚀 一键部署！真正的 AI
+聊天机器人！支持ChatGPT、文心一言、Bing、Bard、ChatGLM、POE，多账号，人设调教，虚拟女仆、图片渲染、语音发送 | 支持 QQ、Telegram、Discord 等平台
+课程相关资料获取指南（持续更新）
+                </pre>
+
+            </span>
+        </span>
+        <span class='alt'>
+            <span>
+                test1
+            </span>
+            论文
+        </span>
+        <span class='alt'>
+            <span>
+                test1
+            </span>
+            C++
+        </span>
+        <span class='alt'>
+            <span>
+                test1
+            </span>
+            域名
+        </span>
+        <span class='alt'>
+            <span>
+                test1
+            </span>
+            学习工具
+        </span>
+        <span class='alt'>
+            <span>
+                test1
+            </span>
+            个人博客参考
+        </span>
+        <span class='alt'>
+            <span>
+                test1
+            </span>
+            资源
+        </span>
+        <span class='alt'>
+            <span>
+                test1
+            </span>
+            学习
+        </span>
+    </div>
+
+
+</body>
+
+</html>

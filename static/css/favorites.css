@@ -1,11 +1,17 @@
 /*标题导航栏开始*/
-* {
+/* * {
     margin: 0;
     padding: 0;
+} */
+
+.max-width {
+    max-width: none;
+    padding: 0 10%;
 }
 
 body {
-    background: url("/static/image/background.JPG");
+    background-color: rgb(29, 31, 33);
+    /* background: url("/static/image/background.JPG"); */
     background-position: 0%;
     background-attachment: fixed;
     background-size: cover;
@@ -59,8 +65,8 @@ a {
 }
 
 .search {
-    width: 40%;
-    height: 50px;
+    width: 601px;
+    height: 45px;
     margin: auto;
 }
 
@@ -68,7 +74,7 @@ a {
     float: left;
     margin: auto;
     width: 10%;
-    height: 50px;
+    height: 45px;
     color: rgb(16, 14, 14);
     border: none;
     outline: none;
@@ -85,7 +91,7 @@ a {
     box-sizing: border-box;
     padding: 0 3% 0 3%;
     width: 80%;
-    height: 50px;
+    height: 45px;
     outline: none;
     border: 0;
     background-color: white;
@@ -93,11 +99,11 @@ a {
     font-size: medium;
 }
 
-.search-buttom {
+span.search-buttom {
     float: left;
     margin: auto;
     width: 10%;
-    height: 50px;
+    height: 45px;
     color: rgb(16, 14, 14);
     border: none;
     outline: none;
@@ -108,22 +114,22 @@ a {
     text-align: left;
     justify-content: center;
     align-items: center;
-    line-height: 50px;
+    line-height: 45px;
     padding-left: 10px;
 }
 
-.search-buttom:hover {
+span.search-buttom:hover {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(5px);
     text-decoration: none;
     z-index: 2;
 }
 
-.search-buttom span {
+span.search-buttom span {
     display: none;
 }
 
-.search-buttom:hover span {
+span.search-buttom:hover span {
 
     text-align: left;
     justify-content: center;
@@ -152,23 +158,23 @@ a {
     overflow-x: hidden;
 }
 
-.search-buttom:hover span::-webkit-scrollbar {
+span.search-buttom:hover span::-webkit-scrollbar {
     /* 隐藏默认的滚动条 */
     -webkit-appearance: none;
 }
 
-.search-buttom:hover span::-webkit-scrollbar:vertical {
+span.search-buttom:hover span::-webkit-scrollbar:vertical {
     /* 设置垂直滚动条宽度 */
     width: 2px;
 }
 
 /* 这里不需要用到这个 */
-.search-buttom:hover span::-webkit-scrollbar:horizontal {
+span.search-buttom:hover span::-webkit-scrollbar:horizontal {
     /* 设置水平滚动条厚度 */
     height: 2px;
 }
 
-.search-buttom:hover span::-webkit-scrollbar-thumb {
+span.search-buttom:hover span::-webkit-scrollbar-thumb {
     /* 滚动条的其他样式定制，注意，这个一定也要定制，否则就是一个透明的滚动条 */
     border-radius: 8px;
     border: 2px solid rgba(255, 255, 255, .4);
@@ -188,11 +194,11 @@ a {
     z-index: 100;
 }
 
-A {
+/* A {
     text-decoration: none;
     text-align: left;
     content: counter("sdfsd");
-}
+} */
 
 div.favorites {
     clear: both;
@@ -209,7 +215,7 @@ div.favorites {
     align-items: center;
 }
 
-.alt {
+span.alt {
     float: left;
     display: flex;
     text-align: center;
@@ -218,7 +224,7 @@ div.favorites {
 
     margin: auto;
 
-    font-size: x-large;
+    font-size: medium;
 
     position: relative;
     /* background-color: transparent; */
@@ -229,22 +235,22 @@ div.favorites {
     border-radius: 8px;
 
     /* text-decoration: none; */
-    color: black;
-    background-color: rgba(255, 255, 255, .3);
+    color: #fff;
+    background-color: rgba(255, 255, 255, .1);
 }
 
-.alt:hover {
+span.alt:hover {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(5px);
     text-decoration: none;
     z-index: 2;
 }
 
-.alt span {
+span.alt span {
     display: none;
 }
 
-.alt:hover span {
+span.alt:hover span {
 
     text-align: left;
     justify-content: center;
@@ -273,31 +279,52 @@ div.favorites {
     overflow-x: hidden;
 }
 
-.alt:hover span::-webkit-scrollbar {
+span.alt:hover span::-webkit-scrollbar {
     /* 隐藏默认的滚动条 */
     -webkit-appearance: none;
 }
 
-.alt:hover span::-webkit-scrollbar:vertical {
+span.alt:hover span::-webkit-scrollbar:vertical {
     /* 设置垂直滚动条宽度 */
-    width: 2px;
+    width: 1px;
 }
 
 /* 这里不需要用到这个 */
-.alt:hover span::-webkit-scrollbar:horizontal {
+span.alt:hover span::-webkit-scrollbar:horizontal {
     /* 设置水平滚动条厚度 */
-    height: 2px;
+    height: 1px;
 }
 
-.alt:hover span::-webkit-scrollbar-thumb {
+span.alt:hover span::-webkit-scrollbar-thumb {
     /* 滚动条的其他样式定制，注意，这个一定也要定制，否则就是一个透明的滚动条 */
     border-radius: 8px;
     border: 2px solid rgba(255, 255, 255, .4);
     background-color: rgba(0, 0, 0, .5);
 }
 
-A {
+/* A {
     text-decoration: none;
     text-align: left;
     content: counter("sdfsd");
+} */
+
+pre {
+    padding: 7px;
+    margin: 0;
+    color: black;
+}
+
+.hide {
+    color: black;
+}
+
+.hide a {
+    color: black;
+    text-decoration: none;
+
+}
+
+.hide a:hover {
+    color: blue;
+    text-decoration: underline;
 }
