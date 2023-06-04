@@ -148,7 +148,10 @@ $ uwsgi --ini scripts/uwsgi.ini
 │   │<br>
 
 ### 8. 图床
-typorn使用
-picgo作为中介
-SFTP协议传输，插件运行
-传到media文件中
+typorn使用<br>
+picgo作为中介<br>
+SFTP协议传输，插件运行<br>
+传到media文件中<br>
+
+23.6.4<br>
+完成旅行地图（调用高德API）<br>
