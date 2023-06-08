@@ -117,7 +117,7 @@ function addMarker_LiJiang() {
         content = [];
     content.push("信息1");
     content.push("信息2");
-    content.push("<a href='https://liuux.top'>详细信息</a>");
+    content.push("<a href='https://liuux.top/page_travle/none/'>详细信息</a>");
     var infoWindow = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title, content.join("<br/>")),
@@ -141,7 +141,7 @@ function addMarker_ErYuan() {
         content = [];
     content.push("信息1");
     content.push("信息2");
-    content.push("<a href='https://liuux.top'>详细信息</a>");
+    content.push("<a href='https://liuux.top/page_travle/none/'>详细信息</a>");
     var infoWindow = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title, content.join("<br/>")),
@@ -163,7 +163,7 @@ function addMarker_NingLang() {
         content = [];
     content.push("信息1");
     content.push("信息2");
-    content.push("<a href='https://liuux.top'>详细信息</a>");
+    content.push("<a href='https://liuux.top/page_travle/none/'>详细信息</a>");
     var infoWindow = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title, content.join("<br/>")),
@@ -185,7 +185,7 @@ function addMarker_DaLi() {
         content = [];
     content.push("信息1");
     content.push("信息2");
-    content.push("<a href='https://liuux.top'>详细信息</a>");
+    content.push("<a href='https://liuux.top/page_travle/none/'>详细信息</a>");
     var infoWindow = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title, content.join("<br/>")),
@@ -207,7 +207,7 @@ function addMarker_Huaping() {
         content = [];
     content.push("信息1");
     content.push("信息2");
-    content.push("<a href='https://liuux.top'>详细信息</a>");
+    content.push("<a href='https://liuux.top/page_travle/none/'>详细信息</a>");
     var infoWindow = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title, content.join("<br/>")),
@@ -229,7 +229,7 @@ function addMarker_LuGuHu() {
         content = [];
     content.push("信息1");
     content.push("信息2");
-    content.push("<a href='https://liuux.top'>详细信息</a>");
+    content.push("<a href='https://liuux.top/page_travle/none/'>详细信息</a>");
     var infoWindow = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title, content.join("<br/>")),
@@ -251,7 +251,7 @@ function addMarker_ChengDu() {
         content = [];
     content.push("信息1");
     content.push("信息2");
-    content.push("<a href='https://liuux.top'>详细信息</a>");
+    content.push("<a href='https://liuux.top/page_travle/none/'>详细信息</a>");
     var infoWindow = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title, content.join("<br/>")),
@@ -273,7 +273,7 @@ function addMarker_YiBin() {
         content = [];
     content.push("信息1");
     content.push("信息2");
-    content.push("<a href='https://liuux.top'>详细信息</a>");
+    content.push("<a href='https://liuux.top/page_travle/none/'>详细信息</a>");
     var infoWindow = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title, content.join("<br/>")),
@@ -295,7 +295,7 @@ function addMarker_ZiGong() {
         content = [];
     content.push("信息1");
     content.push("信息2");
-    content.push("<a href='https://liuux.top'>详细信息</a>");
+    content.push("<a href='https://liuux.top/page_travle/none/'>详细信息</a>");
     var infoWindow = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title, content.join("<br/>")),
@@ -317,7 +317,7 @@ function addMarker_JianYang() {
         content = [];
     content.push("信息1");
     content.push("信息2");
-    content.push("<a href='https://liuux.top'>详细信息</a>");
+    content.push("<a href='https://liuux.top/page_travle/none/'>详细信息</a>");
     var infoWindow = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title, content.join("<br/>")),
@@ -339,7 +339,7 @@ function addMarker_ChongQing() {
         content = [];
     content.push("信息1");
     content.push("信息2");
-    content.push("<a href='https://liuux.top'>详细信息</a>");
+    content.push("<a href='https://liuux.top/page_travle/none/'>详细信息</a>");
     var infoWindow = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title, content.join("<br/>")),
@@ -361,7 +361,7 @@ function addMarker_HaErBin() {
         content = [];
     content.push("信息1");
     content.push("信息2");
-    content.push("<a href='https://liuux.top'>详细信息</a>");
+    content.push("<a href='https://liuux.top/page_travle/none/'>详细信息</a>");
     var infoWindow = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title, content.join("<br/>")),
@@ -383,7 +383,7 @@ function addMarker_QingAn() {
         content = [];
     content.push("信息1");
     content.push("信息2");
-    content.push("<a href='https://liuux.top'>详细信息</a>");
+    content.push("<a href='https://liuux.top/page_travle/none/'>详细信息</a>");
     var infoWindow = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title, content.join("<br/>")),

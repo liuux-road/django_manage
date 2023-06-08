@@ -20,8 +20,7 @@
     max-width: none;
     padding: 0 10%;
     box-sizing: border-box;
-
-
+    width: 100%;
 }
 
 body {
@@ -347,7 +346,7 @@ div>dl>dt:hover DL::-webkit-scrollbar-thumb {
 
 dl>dt>dl {
     margin: 0;
-    padding: 0px 6px;
+    padding: 0px 6px 5px 6px;
 }
 
 dt a {

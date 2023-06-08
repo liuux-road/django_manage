@@ -1,20 +1,39 @@
 /*标题导航栏开始*/
-/* * {
+* {
     margin: 0;
     padding: 0;
-} */
+    border: none;
+}
+
+.filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(255, 255, 255, 0.1);
+    backdrop-filter: blur(50px);
+    display: flex;
+}
 
 .max-width {
     max-width: none;
     padding: 0 10%;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 body {
-    background-color: rgb(29, 31, 33);
-    /* background: url("/static/image/background.JPG"); */
-    background-position: 0%;
-    background-attachment: fixed;
-    background-size: cover;
+    /* background-color: rgb(29, 31, 33); */
+    background: url("/media/image/searchbg.jpg");
+    background-position: 0% !important;
+    /* background-attachment: fixed !important; */
+    background-size: cover !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 li {
@@ -65,9 +84,10 @@ a {
 }
 
 .search {
-    width: 601px;
+    width: 600px;
     height: 45px;
     margin: auto;
+    padding: 40px 0 90px 0;
 }
 
 .search-left {
@@ -96,7 +116,7 @@ a {
     border: 0;
     background-color: white;
     margin: 0;
-    font-size: medium;
+    /* font-size: medium; */
 }
 
 span.search-buttom {
@@ -141,12 +161,12 @@ span.search-buttom:hover span {
     /* margin: 1%; */
     border-radius: 8px;
     position: absolute;
-    top: -150px;
-    left: 0;
+    top: 0px;
+    left: -40px;
     display: block;
     width: auto;
-    height: auto;
-    background-color: white;
+    height: 45px;
+    /* background-color: blanchedalmond; */
     /* background-color: rgba(255, 255, 255, 1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(5px); */
@@ -165,7 +185,7 @@ span.search-buttom:hover span::-webkit-scrollbar {
 
 span.search-buttom:hover span::-webkit-scrollbar:vertical {
     /* 设置垂直滚动条宽度 */
-    width: 2px;
+    width: 0px;
 }
 
 /* 这里不需要用到这个 */
@@ -183,15 +203,32 @@ span.search-buttom:hover span::-webkit-scrollbar-thumb {
 
 .button {
     display: block;
-    height: 40px;
-    width: 100px;
+    height: 45px;
+    width: 130px;
     border-radius: 24px;
     /* transform: translate(-50%, -50%); */
 
-    background-color: rab(204, 204, 204);
     border: 0;
-    margin: 3px 0;
-    z-index: 100;
+
+
+    border: none;
+    outline: none;
+    /* padding: 2px 10px; */
+    box-sizing: border-box;
+    border-radius: 35px;
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    border-right: 1px solid rgb(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: normal;
+    color: #fff;
+
+    background-color: white !important;
+    color: #666;
+    cursor: pointer;
+    font-weight: 400;
+    z-index: inherit;
 }
 
 /* A {
@@ -215,7 +252,8 @@ div.favorites {
     align-items: center;
 }
 
-span.alt {
+
+div>dl>dt {
     float: left;
     display: flex;
     text-align: center;
@@ -230,27 +268,29 @@ span.alt {
     /* background-color: transparent; */
     float: left;
     width: 100px;
-    height: 100px;
+    height: 60px;
     margin: 1%;
     border-radius: 8px;
 
     /* text-decoration: none; */
     color: #fff;
     background-color: rgba(255, 255, 255, .1);
+
 }
 
-span.alt:hover {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(5px);
+dt:hover {
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    background-color: rgba(255, 228, 196, .3);
     text-decoration: none;
     z-index: 2;
 }
 
-span.alt span {
+div>dl>dt DL {
     display: none;
 }
 
-span.alt:hover span {
+div>dl>dt:hover DL {
 
     text-align: left;
     justify-content: center;
@@ -260,13 +300,14 @@ span.alt:hover span {
     font-size: medium;
 
     /* margin: 1%; */
-    border-radius: 8px;
+    border-radius: 5px;
     position: absolute;
-    top: 100px;
+    top: 60px;
     left: 0;
     display: block;
-    width: 400px;
-    height: 400px;
+    max-width: 500px;
+    min-width: 250px;
+    max-height: 300px;
     /* background-color: rgba(255, 255, 255, .2); */
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
@@ -277,54 +318,82 @@ span.alt:hover span {
 
     overflow-y: scroll;
     overflow-x: hidden;
+
 }
 
-span.alt:hover span::-webkit-scrollbar {
+div>dl>dt:hover DL::-webkit-scrollbar {
     /* 隐藏默认的滚动条 */
     -webkit-appearance: none;
 }
 
-span.alt:hover span::-webkit-scrollbar:vertical {
+div>dl>dt:hover DL::-webkit-scrollbar:vertical {
     /* 设置垂直滚动条宽度 */
-    width: 1px;
+    width: 4px;
 }
 
 /* 这里不需要用到这个 */
-span.alt:hover span::-webkit-scrollbar:horizontal {
-    /* 设置水平滚动条厚度 */
-    height: 1px;
-}
+/* div>dl>dt:hover DL::-webkit-scrollbar:horizontal {
+    
+    height: 4px;
+} */
 
-span.alt:hover span::-webkit-scrollbar-thumb {
+div>dl>dt:hover DL::-webkit-scrollbar-thumb {
     /* 滚动条的其他样式定制，注意，这个一定也要定制，否则就是一个透明的滚动条 */
     border-radius: 8px;
     border: 2px solid rgba(255, 255, 255, .4);
     background-color: rgba(0, 0, 0, .5);
 }
 
-/* A {
-    text-decoration: none;
-    text-align: left;
-    content: counter("sdfsd");
-} */
-
-pre {
-    padding: 7px;
+dl>dt>dl {
     margin: 0;
-    color: black;
+    padding: 0px 6px 5px 6px;
 }
 
-.hide {
-    color: black;
+dt a {
+    display: block !important;
+    font-size: 0.9em !important;
+    margin-block-start: 0 !important;
+    margin-block-end: 0 !important;
+    margin-inline-start: 0px !important;
+    margin-inline-end: 0px !important;
+    font-weight: 100 !important;
+    color: black !important;
+    width: 100%;
+
+    display: flex;
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
 }
 
-.hide a {
+.content h3 {
+    display: block;
+    font-size: 1em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 100;
     color: black;
-    text-decoration: none;
-
+    z-index: 1;
 }
 
-.hide a:hover {
-    color: blue;
-    text-decoration: underline;
+#header h1 {
+    color: rgba(0, 0, 0, .9);
+}
+
+#header #nav {
+    color: rgba(0, 0, 0, .8);
+}
+
+#header #nav ul a {
+    color: inherit;
+}
+
+#footer {
+    color: black !important;
+}
+
+#footer a {
+    color: black !important;
 }

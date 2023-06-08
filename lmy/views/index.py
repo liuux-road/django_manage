@@ -9,4 +9,4 @@ from django.shortcuts import render
 #     return HttpResponse(line1)
 
 def index(request):
-    return render(request, "favorites.html")
+    return render(request, "lmy.html")

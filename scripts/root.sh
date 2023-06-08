@@ -19,14 +19,19 @@ JS2_PATH_DIST=${JS2_PATH}dist/
 JS2_PATH_SRC=${JS2_PATH}src/
 find $JS2_PATH_SRC -type f -name '*.js' | sort | xargs cat | terser -c -m > ${JS2_PATH_DIST}main.js
 
-JS3_PATH=/home/liuux/django_manage/favorites/static/js/
+JS3_PATH=/home/liuux/django_manage/nav/static/js/
 JS3_PATH_DIST=${JS3_PATH}dist/
 JS3_PATH_SRC=${JS3_PATH}src/
-find $JS3_PATH_SRC -type f -name '*.js' | sort | xargs cat | terser -c -m > ${JS3_PATH_DIST}favorites.js
+find $JS3_PATH_SRC -type f -name '*.js' | sort | xargs cat | terser -c -m > ${JS3_PATH_DIST}nav.js
 
 JS4_PATH=/home/liuux/django_manage/travel/static/js/
 JS4_PATH_DIST=${JS4_PATH}dist/
 JS4_PATH_SRC=${JS4_PATH}src/
 find $JS4_PATH_SRC -type f -name '*.js' | sort | xargs cat | terser -c -m > ${JS4_PATH_DIST}travel.js
+
+JS5_PATH=/home/liuux/django_manage/lmy/static/js/
+JS5_PATH_DIST=${JS5_PATH}dist/
+JS5_PATH_SRC=${JS5_PATH}src/
+find $JS5_PATH_SRC -type f -name '*.js' | sort | xargs cat | terser -c -m > ${JS5_PATH_DIST}lmy.js
 
 echo yes | python3 /home/liuux/django_manage/manage.py collectstatic

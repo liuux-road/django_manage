@@ -9,79 +9,63 @@ class Settings {
 
 
         this.$settings = $(`
-<div class="ac-game-settings">
-    <div class="ac-game-settings-login">
-        <div class="ac-game-settings-title">
-            登录
+        <div class="ac-game-settings">
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+            <div class="container">
+            <div class="form ac-game-settings-login">
+            <h2>登录</h2>
+            <form>
+                <div class="inputBox ac-game-settings-username">
+                    <input type="text" placeholder="用户名">
+                </div>
+                <div class="inputBox ac-game-settings-password">
+                    <input type="password" placeholder="密码">
+                </div>
+                <div class="inputBox ac-game-settings-submit">
+                    <div class="ac-game-settings-item">
+                        <button type="button">登录</button>
+                    </div>
+                </div>
+                <!-- <p class="forget" style="text-align: right;">忘记密码？<a href="">点我</a></p> -->
+                <div class="ac-game-settings-error-message"></div>
+                <p class="forget" style="text-align: right;">还未注册？
+                    <a href="" onclick="return false;" class="ac-game-settings-option">注册</a>
+                </p>
+            </form>
         </div>
-        <div class="ac-game-settings-username">
-            <div class="ac-game-settings-item">
+        <div class="form ac-game-settings-register">
+            <h2>注册</h2>
+            <div class="inputBox ac-game-settings-username">
                 <input type="text" placeholder="用户名">
             </div>
-        </div>
-        <div class="ac-game-settings-password">
-            <div class="ac-game-settings-item">
+            <div class="inputBox ac-game-settings-password ac-game-settings-password-first">
                 <input type="password" placeholder="密码">
             </div>
-        </div>
-        <div class="ac-game-settings-submit">
-            <div class="ac-game-settings-item">
-                <button>登录</button>
-            </div>
-        </div>
-        <div class="ac-game-settings-error-message">
-        </div>
-        <div class="ac-game-settings-option">
-            注册
-        </div>
-        <br>
-        <div class="ac-game-settings-acwing">
-            <img width="30" src="https://liuux.top/static/image/settings/acwing_logo.png">
-            <br>
-            <div>
-                AcWing一键登录
-            </div>
-        </div>
-    </div>
-    <div class="ac-game-settings-register">
-        <div class="ac-game-settings-title">
-            注册
-        </div>
-        <div class="ac-game-settings-username">
-            <div class="ac-game-settings-item">
-                <input type="text" placeholder="用户名">
-            </div>
-        </div>
-        <div class="ac-game-settings-password ac-game-settings-password-first">
-            <div class="ac-game-settings-item">
-                <input type="password" placeholder="密码">
-            </div>
-        </div>
-        <div class="ac-game-settings-password ac-game-settings-password-second">
-            <div class="ac-game-settings-item">
+            <div class="inputBox ac-game-settings-password ac-game-settings-password-second">
                 <input type="password" placeholder="确认密码">
             </div>
-        </div>
-        <div class="ac-game-settings-submit">
-            <div class="ac-game-settings-item">
-                <button>注册</button>
+            <div class="inputBox ac-game-settings-submit">
+                <div class="ac-game-settings-item">
+                    <button type="button">注册</button>
+                </div>
             </div>
+            <div class="ac-game-settings-error-message">
+            </div>
+            <p class="forget" style="text-align: right;">
+                <a href="" onclick="return false;" class="ac-game-settings-option">登录</a>
+            </p>
         </div>
-        <div class="ac-game-settings-error-message">
-        </div>
-        <div class="ac-game-settings-option">
-            登录
-        </div>
-        <br>
-        <div class="ac-game-settings-acwing">
-            <img width="30" src="https://app165.acapp.acwing.com.cn/static/image/settings/acwing_logo.png">
-            <br>
-            <div>
-                AcWing一键登录
             </div>
         </div>
     </div>
-</div>
 `);
         this.$login = this.$settings.find(".ac-game-settings-login");
         this.$login_username = this.$login.find(".ac-game-settings-username input");
