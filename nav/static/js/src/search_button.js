@@ -99,8 +99,8 @@ $('#input_value').on("keydown", function (e) {
     if (e.key == "Enter")  // 判断输入是否是Enter
     {
         $('.Bing').click();
-        console.log(key_pressed);
-        console.log(key_time);
+        // console.log(key_pressed);
+        // console.log(key_time);
     }
 })
 

@@ -1,8 +1,18 @@
+```shell
+// 启动
+$ uwsgi --ini scripts/uwsgi.ini
+$ daphne -b 0.0.0.0 -p 5015 django_manage.asgi:application
+~/django_manage/scripts$ ./compress_game_js.sh
+~/django_manage/match_system/src$ ./main.py
+```
+
+
+
 ### 1. 新建 **Django** 项目
 
 ```shell
 $ django-admin --version
-$ django-admin startproject acapp
+$ django-admin startproject django_manage
 $ tree .
 ```
 
